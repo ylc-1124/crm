@@ -5,16 +5,11 @@ import org.apache.commons.lang3.StringUtils;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-/**
- * 乐字节：专注线上IT培训
- * 答疑老师微信：lezijie
- */
+
 public class PhoneUtil {
 
     /***
      * 校验手机格式是否正确
-     * @param phone
-     * @return boolean
      */
     public static boolean isMobile(String phone) {
         Pattern p = null;

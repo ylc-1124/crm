@@ -135,7 +135,6 @@ layui.use(['table', 'layer'], function () {
 
     /**
      * 更新营销机会的开发状态
-     * @param devResult
      */
     function updateSaleChanceDevResult(devResult) {
         // 弹出确认框，询问用户是否确认删除

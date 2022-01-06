@@ -38,7 +38,7 @@ public class GlobalExceptionResolver implements HandlerExceptionResolver {
         ModelAndView mv = new ModelAndView("error");
         mv.addObject("code", 500);
         mv.addObject("msg", "系统异常,请重试");
-        log.error("产生异常{}", ex);
+        log.error("全局异常处理器捕获到异常{}", ex);
 
         if (handler instanceof HandlerMethod) {
             HandlerMethod handlerMethod = ((HandlerMethod) handler);

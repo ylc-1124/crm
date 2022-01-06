@@ -16,7 +16,7 @@
             <!-- 是否去除日期那行注释 -->
             <property name="suppressDate" value="ture"/>
             <!-- 是否去除自动生成的注释 true：是 ： false:否 -->
-            <property name="suppressAllComments" value="false"/>
+            <property name="suppressAllComments" value="true"/>
         </commentGenerator>
 
         <!-- 数据库链接地址账号密码 -->
@@ -62,7 +62,7 @@
 
 
 
-        <table tableName="t_sale_chance" domainObjectName="SaleChange"
+        <table tableName="t_module" domainObjectName="Module"
                enableCountByExample="false" enableUpdateByExample="false"
                enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table>
 

@@ -73,7 +73,6 @@ layui.use(['form', 'layer'], function () {
         url: ctx + "/user/queryAllSales",
         data: {},
         success: function (data) {
-            // console.log(data);
             // 判断返回的数据是否为空
             if (data != null) {
                 // 获取隐藏域设置的指派人ID
