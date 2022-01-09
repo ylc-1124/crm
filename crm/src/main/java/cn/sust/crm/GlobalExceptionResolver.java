@@ -1,6 +1,7 @@
 package cn.sust.crm;
 
 import cn.sust.crm.base.ResultInfo;
+import cn.sust.crm.exceptions.AuthException;
 import cn.sust.crm.exceptions.NoLoginException;
 import cn.sust.crm.exceptions.ParamsException;
 import com.alibaba.fastjson.JSON;
@@ -48,11 +49,17 @@ public class GlobalExceptionResolver implements HandlerExceptionResolver {
             if (responseBody == null) {
                 //返回视图
                 if (ex instanceof ParamsException) {
+                    //参数异常
                     ParamsException p = (ParamsException) ex;
                     //设置异常信息
                     mv.addObject("code", p.getCode());
                     mv.addObject("msg", p.getMsg());
                     return mv;
+                } else if (ex instanceof AuthException) {
+                    //认证异常
+                    AuthException a = (AuthException) ex;
+                    mv.addObject("code", a.getCode());
+                    mv.addObject("msg", a.getMsg());
                 }
             } else { //返回json数据
                 //设置默认的异常处理
@@ -64,6 +71,11 @@ public class GlobalExceptionResolver implements HandlerExceptionResolver {
                     ParamsException p = (ParamsException) ex;
                     resultInfo.setCode(p.getCode());
                     resultInfo.setMsg(p.getMsg());
+                } else if (ex instanceof AuthException) {
+                    //认证异常
+                    AuthException a = (AuthException) ex;
+                    resultInfo.setCode(a.getCode());
+                    resultInfo.setMsg(a.getMsg());
                 }
                 //设置响应类型和编码格式(响应json)
                 response.setContentType("application/json;charset=UTF-8");

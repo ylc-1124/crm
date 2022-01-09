@@ -46,34 +46,34 @@
     <div class="layui-side layui-bg-black">
         <div class="layui-side-scroll layui-left-menu">
             <#-- 判断当前登录用户是否拥有权限 -->
-<#--            <#if permissions??>-->
+            <#if permissions??>
                 <ul class="layui-nav layui-nav-tree layui-left-nav-tree layui-this" id="currency">
                     <#-- 通过freemarker中的seq_contains内建指令判断菜单是否显示 -->
-<#--                    <#if permissions?seq_contains("10") >-->
+                    <#if permissions?seq_contains("10") >
                         <li class="layui-nav-item">
                             <a href="javascript:;" class="layui-menu-tips"><i class="fa fa-street-view"></i><span
                                         class="layui-left-nav"> 营销管理</span> <span class="layui-nav-more"></span></a>
                             <dl class="layui-nav-child">
-<#--                                <#if permissions?seq_contains("1010")>-->
+                                <#if permissions?seq_contains("1010")>
                                     <dd>
                                         <a href="javascript:;" class="layui-menu-tips" data-type="tabAdd"
                                            data-tab-mpi="m-p-i-1" data-tab="sale_chance/index" target="_self"><i
                                                     class="fa fa-tty"></i><span
                                                     class="layui-left-nav"> 营销机会管理</span></a>
                                     </dd>
-<#--                                </#if>-->
-<#--                                <#if permissions?seq_contains("1020")>-->
+                                </#if>
+                                <#if permissions?seq_contains("1020")>
                                     <dd>
                                         <a href="javascript:;" class="layui-menu-tips" data-type="tabAdd"
                                            data-tab-mpi="m-p-i-2" data-tab="cus_dev_plan/index" target="_self"><i
                                                     class="fa fa-ellipsis-h"></i><span
                                                     class="layui-left-nav"> 客户开发计划</span></a>
                                     </dd>
-<#--                                </#if>-->
+                                </#if>
                             </dl>
                         </li>
-<#--                    </#if>-->
-<#--                    <#if permissions?seq_contains("20") >-->
+                    </#if>
+                    <#if permissions?seq_contains("20") >
                         <li class="layui-nav-item">
                             <a href="javascript:;" class="layui-menu-tips"><i class="fa fa-flag"></i><span
                                         class="layui-left-nav"> 客户管理</span> <span class="layui-nav-more"></span></a>
@@ -91,8 +91,8 @@
                                 </dd>
                             </dl>
                         </li>
-<#--                    </#if>-->
-<#--                    <#if permissions?seq_contains("30") >-->
+                    </#if>
+                    <#if permissions?seq_contains("30") >
                         <li class="layui-nav-item">
                             <a href="javascript:;" class="layui-menu-tips"><i class="fa fa-desktop"></i><span
                                         class="layui-left-nav"> 服务管理</span> <span class="layui-nav-more"></span></a>
@@ -129,8 +129,8 @@
                                 </dd>
                             </dl>
                         </li>
-<#--                    </#if>-->
-<#--                    <#if permissions?seq_contains("40") >-->
+                    </#if>
+                    <#if permissions?seq_contains("40") >
                         <li class="layui-nav-item">
                             <a href="javascript:;" class="layui-menu-tips"><i class="fa fa-home"></i><span
                                         class="layui-left-nav"> 统计报表</span> <span class="layui-nav-more"></span></a>
@@ -155,8 +155,8 @@
                                 </dd>
                             </dl>
                         </li>
-<#--                    </#if>-->
-<#--                    <#if permissions?seq_contains("60") >-->
+                    </#if>
+                    <#if permissions?seq_contains("60") >
                         <li class="layui-nav-item">
                             <a href="javascript:;" class="layui-menu-tips"><i class="fa fa-gears"></i><span
                                         class="layui-left-nav"> 系统设置</span> <span class="layui-nav-more"></span></a>
@@ -183,10 +183,10 @@
                                 </dd>
                             </dl>
                         </li>
-<#--                    </#if>-->
+                    </#if>
                     <span class="layui-nav-bar" style="top: 201px; height: 0px; opacity: 0;"></span>
                 </ul>
-<#--            </#if>-->
+            </#if>
         </div>
     </div>
 

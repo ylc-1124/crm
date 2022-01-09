@@ -55,7 +55,6 @@ function loadModuleData() {
  * @param treeNode
  */
 function zTreeOnCheck(event, treeId, treeNode) {
-    // alert(treeNode.tId + ", " + treeNode.name + "," + treeNode.checked);
 
     // getCheckedNodes(checked):获取所有被勾选的节点集合。
     // 如果checked=true，表示获取勾选的节点；如果checked=false，表示获取未勾选的节点。

@@ -1,5 +1,6 @@
 package cn.sust.crm.controller;
 
+import cn.sust.crm.annotation.RequiredPermission;
 import cn.sust.crm.base.BaseController;
 import cn.sust.crm.base.ResultInfo;
 import cn.sust.crm.enums.StateStatus;
@@ -46,10 +47,11 @@ public class SaleChanceController extends BaseController {
     }
 
     /**
-     * 删除营销机会
+     * 删除营销机会 101003
      */
     @PostMapping("delete")
     @ResponseBody
+    @RequiredPermission(code = "101003")
     public ResultInfo deleteSaleChance(Integer[] ids) {
         //调用service层的删除方法
         saleChanceService.deleteSaleChance(ids);
@@ -57,10 +59,11 @@ public class SaleChanceController extends BaseController {
     }
 
     /**
-     * 添加营销机会
+     * 添加营销机会 101002
      */
     @PostMapping("add")
     @ResponseBody
+    @RequiredPermission(code = "101002")
     public ResultInfo addSaleChance(SaleChance saleChance,
                                     HttpServletRequest request) {
         //从cookie中获取当前登录的用户名
@@ -77,6 +80,7 @@ public class SaleChanceController extends BaseController {
      */
     @PostMapping("update")
     @ResponseBody
+    @RequiredPermission(code = "101004")
     public ResultInfo updateSaleChance(SaleChance saleChance) {
         //调用service层的添加方法
         saleChanceService.updateSaleChance(saleChance);
@@ -98,9 +102,10 @@ public class SaleChanceController extends BaseController {
     }
 
     /**
-     * 进入营销机会管理的页面
+     * 进入营销机会管理的页面 1010
      */
     @RequestMapping("index")
+    @RequiredPermission(code = "1010")
     public String index() {
         return "saleChance/sale_chance";
     }

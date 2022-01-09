@@ -34,6 +34,15 @@ mybatis:
   configuration:
     map-underscore-to-camel-case: true
 
+
 ## pageHelper 分页
 pagehelper:
   helper-dialect: mysql
+
+## 设置 dao 日志打印级别
+logging:
+  level:
+    cn:
+      sust:
+        crm:
+          dao: debug
